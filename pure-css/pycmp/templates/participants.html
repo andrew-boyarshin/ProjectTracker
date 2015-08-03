@@ -1,0 +1,26 @@
+<html>
+    <head>
+        {header_tpl}
+        <title>PyCMP - Participants</title>
+    </head>
+    <body class="cmp-participants">
+        {toolbar_default}
+        <div class="labels"><b>Title:</b> {title}</div>
+        <div class="labels"><b>Description:</b> {description}</div>
+        <div>
+            <table class="pure-table">
+                <thead>
+                    <tr>
+                        <th>User ID</th>
+                        <th>User name</th>
+                        <th>Results</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    {part_list}
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

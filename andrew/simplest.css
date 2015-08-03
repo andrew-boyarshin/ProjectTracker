@@ -1,0 +1,96 @@
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 10;
+}
+header a span.to_main {
+    text-decoration: underline;
+    font-size: 1em;
+}
+.header-margin {
+	margin-bottom: 2.5em;
+}
+footer{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 10;
+}
+footer > div.pure-menu.pure-menu-open.pure-menu-horizontal {
+	background-color: rgba(0,0,0,0.15);
+}
+footer > div.pure-menu ul {
+    margin-right:1em;
+}
+.footer-margin {
+	margin-top: 4em;
+}
+.right-align {
+	position: absolute;
+	right: 1em;
+}
+.crit-span {
+	background-color: #FF0000;
+	border-radius: 5px;
+	margin-right: 1em;
+	padding-top: 0.25em;
+	padding-bottom: 0.25em;
+	padding-left: 0.5em;
+	padding-right: 0.5em;
+}
+.comments-container {
+    margin-left: 4em;
+    margin-right:1em;
+}
+.comments-container div {
+    background-color: #EEEEEE;
+    padding: 1em;
+}
+body {
+	padding-left: 1em;
+}
+
+#chat {
+	background-color: #EEEEEE;
+	/*min-height: 1000px;*/
+}
+.right-ticket-span {
+    text-align: right;
+}
+div.ticket-header.pure-g {
+    margin-right: 1em;
+    display: block;
+}
+div.ticket-header.pure-g > h3 {
+    margin: 0;
+}
+div.ticket-header.pure-g > span.right-ticket-span input[type=checkbox] {
+    margin-left: 0.5em;
+}
+div.ticket-header.pure-g > span.right-ticket-span input[type=checkbox] {
+    margin-left: 0.5em;
+}
+ul.ticket-list > li {
+    margin-bottom: 1em;
+}
+span.ticket-cat-select-plain {
+    border-bottom-color: blue;
+    border-bottom-style: dotted;
+    border-bottom-width: 1px;
+}
+div.pure-u-3-4 > div.pure-g.sow-edit-table {
+    border-color: lightgrey;
+    border-width: 1px;
+    border-style: solid;
+    padding: 8px;
+    margin: 8px;
+}
+div.pure-u-3-4 > div.pure-g.sow-edit-table > div.pure-u-11-24 {
+    border-color: lightgrey;
+    border-width: 1px;
+    border-style: solid;
+    padding: 8px;
+}

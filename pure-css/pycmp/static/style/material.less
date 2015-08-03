@@ -1,0 +1,220 @@
+input[type="text"], input[type="password"], input[type="email"], input[type="date"], textarea {
+    color: @text;
+    border: none !important;
+    background-color: transparent !important;
+    border-bottom-style: solid !important;
+    border-bottom-width: 1px !important;
+    border-bottom-color: @green !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    &:valid {
+        border-bottom-color: @green !important;
+    }
+    &:invalid {
+        border-bottom-color: @red !important;
+    }
+}
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 50px @theme inset !important; /* Change the color to your own background color */
+    -webkit-text-fill-color: @toolbar_text !important;
+}
+input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0 50px @theme inset !important;
+    -webkit-text-fill-color: @toolbar_text !important;
+}
+/* Remove Focus Boxes */
+select:focus {
+  outline: none;
+}
+button:focus {
+  outline: none;
+}
+/***************
+      Range 
+***************/
+
+@fill-color: #0f9d58;
+
+.range-field {
+    position: relative;
+}
+
+// No Text Select
+.no-select() {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+input[type=range], input[type=range] + .thumb {
+    .no-select;
+    cursor: pointer;
+}
+
+input[type=range] {
+    position: relative;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    width: 100%;
+    margin: 15px 0px;
+    padding: 0;
+}
+.transform-origin(@args) {
+    -webkit-transform-origin: @args;
+    -moz-transform-origin: @args;
+    -ms-transform-origin: @args; 
+    -o-transform-origin: @args;
+    transform-origin: @args;
+}
+.transform(@args) {
+    -webkit-transform: @args;
+    -moz-transform: @args;
+    -ms-transform: @args; 
+    -o-transform: @args;
+    transform: @args;
+}
+input[type=range] + .thumb {
+    position: absolute;
+    border: none;
+    height: 0;
+    width: 0;
+    border-radius: 50%;
+    background-color: @fill-color;
+    top: 10px;
+    margin-left: -6px;
+
+    .transform-origin(50% 50%);
+    .transform(rotate(-45deg));
+
+    .value {
+        display: block;
+        width: 30px;
+        text-align: center;
+        color: @fill-color;
+        font-size: 0px;
+        .transform(rotate(45deg));
+    }
+
+    &.active {
+        border-radius: 50% 50% 50% 0;
+
+        .value {
+            color: #fff;
+            margin-left: -1px;
+            margin-top: 8px;
+            font-size: 10px;
+        }
+    }
+}
+input[type=range]:focus {
+    outline: none;
+}
+
+// WebKit
+input[type=range]{
+    -webkit-appearance: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    height: 3px;
+    background: #c2c0c2;
+    border: none;
+}
+.transition(@args: 200ms) {
+    -webkit-transition: @args;
+    -moz-transition: @args;
+    -o-transition: @args;
+    -ms-transition: @args;
+    transition: @args;
+}
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+    background-color: @fill-color;
+    transform-origin: 50% 50%;
+    margin: -5px 0 0 0;
+    .transition(.3s);
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #ccc;
+}
+
+// FireFox
+input[type=range]{
+    /* fix for FF unable to apply focus style bug  */
+    border: 1px solid white; 
+
+    /*required for proper track sizing in FF*/
+}
+
+input[type=range]::-moz-range-track {
+    height: 3px;
+    background: #ddd;
+    border: none;
+}
+
+input[type=range]::-moz-range-thumb {
+    border: none;
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+    background: @fill-color;
+    margin-top: -5px;
+}
+
+/*hide the outline behind the border*/
+input[type=range]:-moz-focusring{
+    outline: 1px solid white;
+    outline-offset: -1px;
+}
+
+input[type=range]:focus::-moz-range-track {
+    background: #ccc;
+}
+
+// IE 10+
+input[type=range]::-ms-track {
+    height: 3px;
+
+    /*remove bg colour from the track, we'll use ms-fill-lower and ms-fill-upper instead */
+    background: transparent;
+
+    /*leave room for the larger thumb to overflow with a transparent border */
+    border-color: transparent;
+    border-width: 6px 0;
+
+    /*remove default tick marks*/
+    color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+    background: #777;
+}
+input[type=range]::-ms-fill-upper {
+    background: #ddd;
+}
+input[type=range]::-ms-thumb {
+    border: none;
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+    background: @fill-color;
+}
+input[type=range]:focus::-ms-fill-lower {
+    background: #888;
+}
+input[type=range]:focus::-ms-fill-upper {
+    background: #ccc;
+}
+@import "material/cards.less";
+@import "material/global.less";
+@import "material/prefixes.less";
+@import "material/waves.less";
+@import "material/tabs.less";

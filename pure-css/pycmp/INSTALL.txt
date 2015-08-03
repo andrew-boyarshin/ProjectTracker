@@ -1,0 +1,19 @@
+PyCMP Installation Guide
+
+1. Set up your favourite web-server with wsgi support(nginx, apache, we used nginx)
+2. Set up uwsgi and other packages:
+    * uwsgi
+    * psycopg2
+    * postgresql (9.4)
+    * python3 (3.4)
+    * libssl-dev
+    * scrypt(python module)
+3. Set up uwsgi working directory to pycmp folder
+4. Configure your PostgreSQL installation and remember your settings
+5. Change DB_* fields at the top of db.py file(db module) to your PSQL settings
+6. Check, that your pycmp folder must have read AND WRITE access for all subfolders and users!
+    Or uwsgi - so our project will not have access to write to my_log.log and read static files.
+7. sudo service nginx start
+8. sudo service uwsgi start
+9. Go to https://localhost/
+10. It must work. Or maybe you did sth wrong.

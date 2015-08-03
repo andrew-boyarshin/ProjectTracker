@@ -1,0 +1,24 @@
+<html>
+    <head>
+        {header_tpl}
+        <title>PyCMP - Edit competition</title>
+        <script src="/static/js/cmp_edit.js" type="text/javascript"></script>
+    </head>
+    <body class="cmp-edit">
+        {toolbar_default}
+        <div class="labels">{title}</div>
+        <form action="/quiz/{id}/edit/save" method="POST" class="pure-form" id="save_form">
+            <div class="pure-g top-margin">
+                <div class="pure-u-1-12 labels">Description:</div>
+                <div class="pure-u-1-2">
+                    <input placeholder="Description of your competition" name="description" class="form-fields pure-input-1" type="text" value="{description}" required />
+                </div>
+            </div>
+            {question_list}
+            <div class="top-margin labels">
+                <a onclick="submit_cmp()" class="pure-button button-nice waves-effect">Save</a>
+                <a class="button-nice pure-button waves-effect" href="/">Cancel</a>
+            </div>
+        </form>
+    </body>
+</html>

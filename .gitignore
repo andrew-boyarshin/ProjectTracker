@@ -1,0 +1,5 @@
+*.pyc
+__pycache__
+*.db
+*test*
+.idea/workspace.xml

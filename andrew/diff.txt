@@ -1,0 +1,20 @@
+15c15
+<         $.getJSON('/projects/'+project_id+'/dev/load/' + header_id, function(json) {
+---
+>         $.getJSON('/projects/'+project_id+'/maintain/load/' + header_id, function(json) {
+74c74
+<                                     $.post('/projects/'+project_id+'/dev/ticket/'+tick_id+'/set_category', {val: j+1},
+---
+>                                     $.post('/projects/'+project_id+'/maintain/ticket/'+tick_id+'/set_category', {val: j+1},
+102c102
+<                             url: '/projects/'+project_id+'/dev/'+event.target.dataset['ticket_id']
+---
+>                             url: '/projects/'+project_id+'/maintain/'+event.target.dataset['ticket_id']
+138c138
+<                             $.post('/projects/'+project_id+'/dev/ticket/'+data.target.dataset['ticket_id']+'/comment_create', {msg: data.target.value}, function(received_data) {
+---
+>                             $.post('/projects/'+project_id+'/maintain/ticket/'+data.target.dataset['ticket_id']+'/comment_create', {msg: data.target.value}, function(received_data) {
+177c177
+<                         $.post('/projects/'+project_id+'/dev/'+header_id+'/ticket_create', {data: data.target.value}, function(received_data) {
+---
+>                         $.post('/projects/'+project_id+'/maintain/'+header_id+'/ticket_create', {data: data.target.value}, function(received_data) {

@@ -1,0 +1,27 @@
+<div class="search-results pure-u-1 pure-u-md-1-2 card card-search">
+	<div class="card-content">
+		<span class="card-title">
+			<span class="id-label">
+				#{id}:
+			</span>
+			<span class="title-label no-overflow">
+				<a href="/quiz/{id}">{title}</a>
+			</span>
+		</span>
+		<p>
+			{description}
+		</p>
+	</div>
+	{author_options_start}
+	<div class="card-action">
+		<a href="/quiz/{id}/edit" class="dashboard-edit pure-button button-nice waves-effect">
+			<i class="fa fa-pencil"></i>
+			Edit
+		</a>
+		<a href="/quiz/{id}/participants" class="dashboard-parts pure-button button-nice waves-effect">
+			<i class="fa fa-users"></i>
+			Participants
+		</a>
+	</div>
+	{author_options_end}
+</div>

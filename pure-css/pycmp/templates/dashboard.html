@@ -1,0 +1,42 @@
+<html>
+    <head>
+        {header_tpl}
+        <title>PyCMP - Dashboard</title>
+    </head>
+    <body class="dashboard">
+        <div class="pure-menu pure-menu-open pure-menu-horizontal">
+            {toolbar_tpl}
+            {create_cmp_comment_start}
+            <ul class="menu-create-cmp">
+                <li>
+                    <a href="/cmp/create">
+                        <img src="/static/img/content-new.png" class="pure-img" /><span> Create</span>
+                    </a>
+                </li>
+            </ul>
+            {create_cmp_comment_end}
+
+            {toolbar_user_tpl}
+            <ul>
+                <li class="pure-menu-selected">
+                    <form action="/dashboard" id="search-form" method="POST" class="pure-form">
+                        <div class="box">
+                            <div class="container-1">
+                                <input class="form-fields dashboard-google-field" type="text" id="search" name="search" placeholder="Search..." />
+                                <span class="icon"><a onclick="document.getElementById('search-form').submit()"><i class="fa fa-search"></i></a></span>
+                            </div>
+                        </div>
+                    </form>
+                </li>
+            </ul>
+        </div>
+        {search_comment_start}
+        <h2 class="dashboard-category-divider">Search results</h2>
+        <div class="dashboard-search-container pure-g">{search_list}</div>
+        {search_comment_end}
+        <h2 class="dashboard-category-divider">CMPs, created by you</h2>
+        <div class="dashboard-user-created-container pure-g">{user_created_list}</div>
+        <h2 class="dashboard-category-divider">CMPs, completed by you</h2>
+        <div class="dashboard-user-solved-container pure-g">{user_solved_list}</div>
+    </body>
+</html>

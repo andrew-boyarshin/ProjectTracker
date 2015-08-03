@@ -1,0 +1,22 @@
+<html>
+    <head>
+        {header_tpl}
+        <title>PyCMP - Create questions</title>
+        <script src="/static/js/cmp_questions.js" type="text/javascript"></script>
+    </head>
+    <body class="cmp-questions">
+        {toolbar_default}
+        <div class="labels"><b>Title:</b> {title}</div>
+        <div class="labels"><b>Description:</b> {description}</div>
+        <div class="labels"><b>Tip:</b> You can add multiply answer variants for one question - just divide them by <code>##</code></div>
+        <form action="/quiz/create/save" method="POST" class="pure-form" id="save_form">
+            <input type="hidden" name="title" value="{title}" />
+            <input type="hidden" name="description" value="{description}" />
+            <input type="hidden" name="qnumber" value="{qnumber}" />
+            {question_list}
+            <div class="top-margin labels">
+                <a onclick="submit_questions()" class="button-nice pure-button waves-effect">Save</a>
+            </div>
+        </form>
+    </body>
+</html>

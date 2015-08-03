@@ -1,0 +1,19 @@
+<html>
+    <head>
+        {header_tpl}
+        <title>PyCMP - Quiz</title>
+        <script src="/static/js/solve_quiz.js" type="text/javascript"></script>
+    </head>
+    <body class="solve">
+        {toolbar_default}
+        <div class="labels">{title}</div>
+        <div class="labels">{description}</div>
+        <form action="/quiz/{cmp_id}/solve" method="POST" class="pure-form" id="save_form">
+            {answer_list}
+            <div class="top-margin labels">
+                <a onclick="submit_answers()" class="button-nice pure-button waves-effect">Next</a>
+                <a class="button-nice pure-button waves-effect" href="/">Cancel</a>
+            </div>
+        </form>
+    </body>
+</html>
